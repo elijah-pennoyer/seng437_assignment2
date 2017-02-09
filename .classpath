@@ -3,5 +3,22 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="jfreechart.jar"/>
+	<classpathentry kind="lib" path="bsh-core-2.0b4.jar"/>
+	<classpathentry kind="lib" path="cglib-2.1_3-src.jar"/>
+	<classpathentry kind="lib" path="cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="gnujaxp.jar"/>
+	<classpathentry kind="lib" path="hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="hamcrest-library-1.1.jar"/>
+	<classpathentry kind="lib" path="jcommon-1.0.0-rc1-cvs.jar"/>
+	<classpathentry kind="lib" path="jcommon-1.0.5.jar"/>
+	<classpathentry kind="lib" path="jmock-2.5.1.jar"/>
+	<classpathentry kind="lib" path="jmock-junit3-2.5.1.jar"/>
+	<classpathentry kind="lib" path="jmock-junit4-2.5.1.jar"/>
+	<classpathentry kind="lib" path="jmock-legacy-2.5.1.jar"/>
+	<classpathentry kind="lib" path="jmock-script-2.5.1.jar"/>
+	<classpathentry kind="lib" path="junit-old.jar"/>
+	<classpathentry kind="lib" path="junit.jar"/>
+	<classpathentry kind="lib" path="objenesis-1.0.jar"/>
+	<classpathentry kind="lib" path="servlet.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
