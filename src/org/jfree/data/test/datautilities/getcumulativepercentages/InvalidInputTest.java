@@ -2,6 +2,8 @@ package org.jfree.data.test.datautilities.getcumulativepercentages;
 
 import static org.junit.Assert.*;
 
+import java.security.InvalidParameterException;
+
 import org.jfree.data.DataUtilities;
 import org.jfree.data.KeyedValues;
 import org.junit.After;
@@ -23,16 +25,8 @@ public class InvalidInputTest {
 		testKeyedValues = null;
 	}
 
-	@Test @exception
+	@Test (expected = InvalidParameterException.class)
 	public void test() {
-//		Mockery mockingContext = new Mockery();
-//		final KeyedValues values = mockingContext.mock(KeyedValues.class);
-//		mockingContext.checking(new Expectations() {
-//			{
-//				
-//			}
-//		});
-		
 		DataUtilities.getCumulativePercentages(testKeyedValues);
 	}
 
