@@ -7,22 +7,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 
-/**
- * This tests the result of entering invalid inputs to the getCumulativePercentages function of the DataUtilities class.
- */
 public class NullInputTest {
 	
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-	
-	
 	/**
-	 * Tests the result of entering a null KeyedValues. Expected result: Exception.
+	 * getCumulativePercentages test plan 1.
+	 * Tests the result of entering a null KeyedValues.
+	 * Expected result: Exception.
 	 */
 	@Test (expected = Exception.class)
 	public void getCumulativePercentages_NullInput_Test() {
