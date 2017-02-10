@@ -25,7 +25,7 @@ public class InvalidInputTest {
 		testKeyedValues = null;
 	}
 
-	@Test (expected = InvalidParameterException.class)
+	@Test (expected = Exception.class)
 	public void test() {
 		DataUtilities.getCumulativePercentages(testKeyedValues);
 	}
