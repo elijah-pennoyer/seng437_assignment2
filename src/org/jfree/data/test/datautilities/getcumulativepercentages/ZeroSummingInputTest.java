@@ -1,7 +1,5 @@
 package org.jfree.data.test.datautilities.getcumulativepercentages;
 
-import static org.junit.Assert.*;
-
 import java.util.ArrayList;
 
 import org.jfree.data.DataUtilities;
@@ -10,18 +8,18 @@ import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.junit.Test;
 
+public class ZeroSummingInputTest {
 
-public class PositiveInputTest {
-	
 	/**
-	 * Test Plan Coverage: getCumulativePercentages test plan 3. 
-	 * Test Strategy Coverage: Data is valid, All values are positive
-	 * Description: Tests a valid data input and a positive data input, with a keyset of (0,1) and values of (3,7)
-	 * Expected Output: A KeyedValues object with keys (0, 1) and values (0.3, 1)
-	 * Assumptions: N/A
+	 * Test Plan Coverage: getCumulativePercentages test plan 4. 
+	 * Test Strategy Coverage: All values sum to 0
+	 * Description: Tests a valid data input with both positive and negative values where the sum is 0, 
+	 * 		with a keyset of (0,1) and values of (-5,5).
+	 * Expected Output: An exception is thrown
+	 * Assumptions: A zero summing input isn't allowed, as it would lead to division by 0.
 	 */
-	@Test
-	public void getCumulativePercentages_ValidPositiveInput_Test() {
+	@Test (expected = Exception.class)
+	public void getCumulativePercentages_ValidZeroSummingInput_Test() {
 		
 		Mockery mockingContext = new Mockery();
 		final KeyedValues input = mockingContext.mock(KeyedValues.class);
@@ -31,7 +29,6 @@ public class PositiveInputTest {
 				allowing (input).getItemCount();
 				will(returnValue(2)); 
 				
-				//TODO - Have no clue if you're allowed to do this, but it makes sense to me...
 				//If getKeys is called, it will return an ArrayList containing Integer objects of 0 and 1
 				allowing (input).getKeys();
 				ArrayList<Integer> toReturn = new ArrayList<Integer>();
@@ -39,13 +36,13 @@ public class PositiveInputTest {
 				toReturn.add(1);
 				will(returnValue(toReturn));
 				
-				//If getValue(0) is called, will return 3
+				//If getValue(0) is called, will return -5
 				allowing (input).getValue(0);
-				will(returnValue(3));
+				will(returnValue(-5));
 				
-				//If getValue(1) is called, will return 7
+				//If getValue(1) is called, will return 5
 				allowing (input).getValue(1);
-				will(returnValue(7));
+				will(returnValue(5));
 				
 				//If getKey(0) is called, will return 0 - The index of the first object
 				allowing (input).getKey(0);
@@ -53,20 +50,12 @@ public class PositiveInputTest {
 				//If getKey(1) is called, will return 1 - The index of the second object
 				allowing (input).getKey(1);
 				will(returnValue(1));
-				
 			}
 		});
 		
+		
+		//This should throw an exception
 		KeyedValues output = DataUtilities.getCumulativePercentages(input);
-		
-		
-		//TODO - Is there a better way than multiple assertTrues?		
-		ArrayList<Integer> expectedKeys = new ArrayList<Integer>();
-		expectedKeys.add(0);
-		expectedKeys.add(1);
-		assertTrue(output.getKeys().equals(expectedKeys));
-		assertTrue((double) output.getValue(0) == 0.3);
-		assertTrue((double) output.getValue(1) == 1);
 		
 	}
 

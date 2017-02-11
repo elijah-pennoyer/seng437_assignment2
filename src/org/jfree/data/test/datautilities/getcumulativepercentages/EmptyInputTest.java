@@ -14,12 +14,14 @@ import org.junit.Test;
 public class EmptyInputTest {
 
 	/**
-	 * getCumulativePercentages test plan 2. 
-	 * Tests the result of using a KeyedValues object with no values.
-	 * Expected output: Empty KeyedValues object 
+	 * Test Plan Coverage: getCumulativePercentages test plan 2. 
+	 * Test Strategy Coverage: Data is empty
+	 * Description: Tests the result of using a KeyedValues object with no values
+	 * Expected Output: Empty KeyedValues object 
+	 * Assumptions: An empty KeyedValues object is a valid input.
 	 */
 	@Test
-	public void getCumulativePercentages_EmptyKeyedValuesInput_Test() {
+	public void getCumulativePercentages_EmptyInput_Test() {
 		
 		Mockery mockingContext = new Mockery();
 		final KeyedValues input = mockingContext.mock(KeyedValues.class);
