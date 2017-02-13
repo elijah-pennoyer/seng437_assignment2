@@ -13,7 +13,7 @@ import org.junit.Test;
 public class NegativeInputTest extends PositiveSummingMixedSignInputsTest {
 
 	/**
-	 * Test Plan Coverage: getCumulativePercentages test plan 7. 
+	 * Test Plan Coverage: getCumulativePercentages test plan 7
 	 * Test Strategy Coverage: All values are negative
 	 * Description: Tests a valid data input and a positive data input, with a keyset of (0,1) and values of (-3,-7)
 	 * Expected Output: A KeyedValues object with keys (0, 1) and values (0.3, 1)

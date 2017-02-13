@@ -14,11 +14,11 @@ import org.junit.Test;
 public class EmptyInputTest {
 
 	/**
-	 * Test Plan Coverage: getCumulativePercentages test plan 2. 
+	 * Test Plan Coverage: getCumulativePercentages test plan 2
 	 * Test Strategy Coverage: Data is empty
 	 * Description: Tests the result of using a KeyedValues object with no values
 	 * Expected Output: Empty KeyedValues object 
-	 * Assumptions: An empty KeyedValues object is a valid input.
+	 * Assumptions: An empty KeyedValues object is a valid input
 	 */
 	@Test
 	public void getCumulativePercentages_EmptyInput_Test() {

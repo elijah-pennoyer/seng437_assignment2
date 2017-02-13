@@ -14,12 +14,12 @@ import com.sun.media.sound.InvalidDataException;
 public class PositiveSummingMixedSignInputsTest {
 
 	/**
-	 * Test Plan Coverage: getCumulativePercentages test plan 6.
+	 * Test Plan Coverage: getCumulativePercentages test plan 6
 	 * Test Strategy Coverage: Values include 0 and negative numbers but sum to positive
 	 * Description: Tests a valid data input with both positive and negative values where the sum is negative, 
-	 * 		with a keyset of (0,1,2) and values of (5,-1,0).
+	 * 		with a keyset of (0,1,2) and values of (5,-1,0)
 	 * Expected Output: InvalidDataException
-	 * Assumptions: Mixtures of positive and negative values in the input KeyedValues is not allowed. 
+	 * Assumptions: Mixtures of positive and negative values in the input KeyedValues is not allowed.
 	 */
 	@Test (expected = InvalidDataException.class)
 	public void getCumulativePercentages_ValidPositiveSummingMixedInput_Test() {

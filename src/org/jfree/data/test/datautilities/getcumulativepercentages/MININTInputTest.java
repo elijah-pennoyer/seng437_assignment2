@@ -11,12 +11,12 @@ import org.junit.Test;
 public class MININTInputTest {
 
 	/**
-	 * Test Plan Coverage: getCumulativePercentages test plan 9.
+	 * Test Plan Coverage: getCumulativePercentages test plan 9
 	 * Test Strategy Coverage: Some values contain MIN_INT
 	 * Description: Tests a valid data input with minimum integer values, 
-	 * 		with a keyset of (0,1) and values of (MIN_INT, MIN_INT).
+	 * 		with a keyset of (0,1) and values of (MIN_INT, MIN_INT)
 	 * Expected Output: Underflow exception
-	 * Assumptions: The program should check for underflow and throw an exception. 
+	 * Assumptions: The program should check for underflow and throw an exception
 	 */
 	@Test (expected = Exception.class)
 	public void getCumulativePercentages_ValidMIN_INTInput_Test() {

@@ -14,7 +14,7 @@ import org.junit.Test;
 public class PositiveInputTest {
 	
 	/**
-	 * Test Plan Coverage: getCumulativePercentages test plan 3. 
+	 * Test Plan Coverage: getCumulativePercentages test plan 3
 	 * Test Strategy Coverage: Data is valid, All values are positive
 	 * Description: Tests a valid data input and a positive data input, with a keyset of (0,1) and values of (3,7)
 	 * Expected Output: A KeyedValues object with keys (0, 1) and values (0.3, 1)

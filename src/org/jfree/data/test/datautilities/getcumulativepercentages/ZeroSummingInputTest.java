@@ -11,12 +11,12 @@ import org.junit.Test;
 public class ZeroSummingInputTest {
 
 	/**
-	 * Test Plan Coverage: getCumulativePercentages test plan 4. 
+	 * Test Plan Coverage: getCumulativePercentages test plan 4
 	 * Test Strategy Coverage: All values sum to 0
 	 * Description: Tests a valid data input with both positive and negative values where the sum is 0, 
-	 * 		with a keyset of (0,1) and values of (-5,5).
+	 * 		with a keyset of (0,1) and values of (-5,5)
 	 * Expected Output: An exception is thrown
-	 * Assumptions: A zero summing input isn't allowed, as it would lead to division by 0.
+	 * Assumptions: A zero summing input isn't allowed, as it would lead to division by 0
 	 */
 	@Test (expected = Exception.class)
 	public void getCumulativePercentages_ValidZeroSummingInput_Test() {

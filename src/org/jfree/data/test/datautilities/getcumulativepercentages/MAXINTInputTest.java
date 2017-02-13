@@ -11,12 +11,12 @@ import org.junit.Test;
 public class MAXINTInputTest {
 
 	/**
-	 * Test Plan Coverage: getCumulativePercentages test plan 8.
+	 * Test Plan Coverage: getCumulativePercentages test plan 8
 	 * Test Strategy Coverage: Some values contain MAX_INT
 	 * Description: Tests a valid data input with maximum integer values, 
-	 * 		with a keyset of (0,1) and values of (MAX_INT, MAX_INT).
+	 * 		with a keyset of (0,1) and values of (MAX_INT, MAX_INT)
 	 * Expected Output: Overflow exception
-	 * Assumptions: The program should check for overflow and throw an exception. 
+	 * Assumptions: The program should check for overflow and throw an exception
 	 */
 	@Test (expected = Exception.class)
 	public void getCumulativePercentages_ValidMAX_INTInput_Test() {
