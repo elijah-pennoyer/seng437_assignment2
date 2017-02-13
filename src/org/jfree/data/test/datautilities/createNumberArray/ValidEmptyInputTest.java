@@ -2,8 +2,6 @@ package org.jfree.data.test.datautilities.createNumberArray;
 
 import static org.junit.Assert.*;
 
-import java.util.Arrays;
-
 import org.jfree.data.DataUtilities;
 import org.junit.Test;
 
@@ -11,7 +9,7 @@ public class ValidEmptyInputTest {
 
 	/**
 	 * Test Plan Coverage: createNumberArray test plan 3
-	 * Test Strategy Coverage: Valid empty
+	 * Test Strategy Coverage: Valid empty equivalence class
 	 * Description: Input an array with a length of 0
 	 * Expected Output: A Number array of length 0
 	 * Assumptions: N/A
@@ -23,7 +21,7 @@ public class ValidEmptyInputTest {
 		Number[] output = DataUtilities.createNumberArray(data);
 		Number[] expected = new Number[0];
 		
-		assertTrue(Arrays.equals(output, expected));
+		assertArrayEquals(expected, output);
 	}
 
 }

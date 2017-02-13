@@ -29,7 +29,7 @@ public class EmptyInputTest {
 			{
 				//The "allowing" labels means that it doesn't matter how many times these options are called.
 				
-				/*TODO - Should we do that or expect the function to use it only once? 
+				/*TODO - Should we use allowing or expect the function to use call these functions only once? 
 				 * It looks like the function calls getItemCount but should we allow getKeys for possible future changes? - Elijah */
 				
 				
@@ -51,7 +51,7 @@ public class EmptyInputTest {
 		KeyedValues output = DataUtilities.getCumulativePercentages(input);
 		
 		//The assumed result is that the output will be an empty KeyedValues object
-		assertTrue(output.getItemCount()==0);
+		assertEquals(0, output.getItemCount());
 
 	}
 

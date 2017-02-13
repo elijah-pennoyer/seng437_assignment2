@@ -60,13 +60,18 @@ public class PositiveInputTest {
 		KeyedValues output = DataUtilities.getCumulativePercentages(input);
 		
 		
-		//TODO - Is there a better way than multiple assertTrues?		
+		//TODO - Is there a better way than multiple asserts?		
 		ArrayList<Integer> expectedKeys = new ArrayList<Integer>();
 		expectedKeys.add(0);
 		expectedKeys.add(1);
-		assertTrue(output.getKeys().equals(expectedKeys));
-		assertTrue((double) output.getValue(0) == 0.3);
-		assertTrue((double) output.getValue(1) == 1);
+		assertEquals(expectedKeys, output.getKeys());
+		//NOTE: The final input for double-based assertEquals is "delta" - An offset of how close the values have to be.
+		//delta = 1e-15 is just a recommendation for delta off of the Internet - http://stackoverflow.com/questions/5686755/meaning-of-epsilon-argument-of-assertequals-for-double-values
+		double delta = 1e-15;
+		assertEquals(0.3, (double) output.getValue(0), delta);
+		assertEquals(1, (double) output.getValue(1), delta);
+		
+		
 		
 	}
 
