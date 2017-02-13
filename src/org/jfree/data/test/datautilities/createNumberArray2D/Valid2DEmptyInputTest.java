@@ -8,10 +8,10 @@ import org.junit.Test;
 public class Valid2DEmptyInputTest {
 
 	/**
-	 * Test Plan Coverage: createNumberArray2D test plan 2-b
-	 * Test Strategy Coverage: Valid non-empty equivalence class
-	 * Description: Input a 3x3 2D array, elements { {-1.5, -1.5, -1.5}, {-1.5, -1.5, -1.5}, {-1.5, -1.5, -1.5} }
-	 * Expected Output: A 2D Number array of { {-1.5, -1.5, -1.5}, {-1.5, -1.5, -1.5}, {-1.5, -1.5, -1.5} }
+	 * Test Plan Coverage: createNumberArray2D test plan 3
+	 * Test Strategy Coverage: Valid empty equivalence class
+	 * Description: Input a 2D array with length of 0
+	 * Expected Output: A 2D Number array with length of 0
 	 * Assumptions: N/A
 	 */
 	@Test
