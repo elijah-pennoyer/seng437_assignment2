@@ -1,4 +1,4 @@
-package org.jfree.data.test.datautilities.getcumulativepercentages;
+package org.jfree.data.test.datautilities.getCumulativePercentages;
 
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
@@ -9,19 +9,19 @@ import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.junit.Test;
 
-public class ZeroSummingInputTest {
+public class MININTInputTest {
 
 	/**
-	 * Test Plan Coverage: getCumulativePercentages test plan 4
-	 * Test Strategy Coverage: All values sum to 0
-	 * Description: Tests a valid data input with both positive and negative values where the sum is 0, 
-	 * 		with a keyset of (0,1) and values of (-5,5)
+	 * Test Plan Coverage: getCumulativePercentages test plan 9
+	 * Test Strategy Coverage: Some values contain MIN_INT
+	 * Description: Tests a valid data input with minimum integer values, 
+	 * 		with a keyset of (0,1) and values of (MIN_INT, MIN_INT)
 	 * Expected Output: InvalidParameterException
-	 * Assumptions: A zero summing input isn't allowed, as it would lead to division by 0
+	 * Assumptions: The program should check for underflow and throw an exception
 	 */
 	@Test (expected = InvalidParameterException.class)
-	public void getCumulativePercentages_ValidZeroSummingInput_Test() {
-		
+	public void getCumulativePercentages_ValidMIN_INTInput_Test() {
+				
 		Mockery mockingContext = new Mockery();
 		final KeyedValues input = mockingContext.mock(KeyedValues.class);
 		mockingContext.checking(new Expectations() {
@@ -37,13 +37,13 @@ public class ZeroSummingInputTest {
 				toReturn.add(1);
 				will(returnValue(toReturn));
 				
-				//If getValue(0) is called, will return -5
+				//If getValue(0) is called, will return MIN_INT
 				allowing (input).getValue(0);
-				will(returnValue(-5));
+				will(returnValue(Integer.MIN_VALUE));
 				
-				//If getValue(1) is called, will return 5
+				//If getValue(1) is called, will return MIN_INT
 				allowing (input).getValue(1);
-				will(returnValue(5));
+				will(returnValue(Integer.MIN_VALUE));
 				
 				//If getKey(0) is called, will return 0 - The index of the first object
 				allowing (input).getKey(0);
@@ -51,11 +51,11 @@ public class ZeroSummingInputTest {
 				//If getKey(1) is called, will return 1 - The index of the second object
 				allowing (input).getKey(1);
 				will(returnValue(1));
+				
 			}
 		});
 		
-		
-		//This should throw an exception
+		//This should throw an exception to indicate underflow
 		DataUtilities.getCumulativePercentages(input);
 		
 	}

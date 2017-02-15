@@ -1,4 +1,5 @@
-package org.jfree.data.test.datautilities.getcumulativepercentages;
+package org.jfree.data.test.datautilities.getCumulativePercentages;
+
 
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
@@ -9,18 +10,18 @@ import org.jmock.Expectations;
 import org.jmock.Mockery;
 import org.junit.Test;
 
-public class NegativeSummingMixedSignInputsTest {
-	
+public class PositiveSummingMixedSignInputsTest {
+
 	/**
-	 * Test Plan Coverage: getCumulativePercentages test plan 5
-	 * Test Strategy Coverage: Values include 0 and positive numbers but sum to negative
+	 * Test Plan Coverage: getCumulativePercentages test plan 6
+	 * Test Strategy Coverage: Values include 0 and negative numbers but sum to positive
 	 * Description: Tests a valid data input with both positive and negative values where the sum is negative, 
-	 * 		with a keyset of (0,1,2) and values of (-5,1,0)
+	 * 		with a keyset of (0,1,2) and values of (5,-1,0)
 	 * Expected Output: InvalidParameterException
-	 * Assumptions: Mixtures of positive and negative values in the input KeyedValues is not allowed
+	 * Assumptions: Mixtures of positive and negative values in the input KeyedValues is not allowed.
 	 */
 	@Test (expected = InvalidParameterException.class)
-	public void getCumulativePercentages_ValidNegativeSummingMixedInput_Test() {
+	public void getCumulativePercentages_ValidPositiveSummingMixedInput_Test() {
 		
 		Mockery mockingContext = new Mockery();
 		final KeyedValues input = mockingContext.mock(KeyedValues.class);
@@ -36,13 +37,13 @@ public class NegativeSummingMixedSignInputsTest {
 				toReturn.add(0); toReturn.add(1); toReturn.add(2);
 				will(returnValue(toReturn));
 				
-				//If getValue(0) is called, will return -5
+				//If getValue(0) is called, will return 5
 				allowing (input).getValue(0);
-				will(returnValue(-5));
+				will(returnValue(5));
 				
-				//If getValue(1) is called, will return 1
+				//If getValue(1) is called, will return -1
 				allowing (input).getValue(1);
-				will(returnValue(1));
+				will(returnValue(-1));
 				
 				//If getValue(2) is called, will return 0
 				allowing (input).getValue(2);
@@ -62,7 +63,6 @@ public class NegativeSummingMixedSignInputsTest {
 				
 			}
 		});
-		
 		
 		//This should throw a InvalidDataException
 		DataUtilities.getCumulativePercentages(input);

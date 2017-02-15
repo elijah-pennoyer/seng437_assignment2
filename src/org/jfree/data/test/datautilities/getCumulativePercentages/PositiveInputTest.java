@@ -1,4 +1,4 @@
-package org.jfree.data.test.datautilities.getcumulativepercentages;
+package org.jfree.data.test.datautilities.getCumulativePercentages;
 
 import static org.junit.Assert.*;
 
