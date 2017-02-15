@@ -1,5 +1,6 @@
 package org.jfree.data.test.datautilities.getcumulativepercentages;
 
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 
 import org.jfree.data.DataUtilities;
@@ -15,10 +16,10 @@ public class MININTInputTest {
 	 * Test Strategy Coverage: Some values contain MIN_INT
 	 * Description: Tests a valid data input with minimum integer values, 
 	 * 		with a keyset of (0,1) and values of (MIN_INT, MIN_INT)
-	 * Expected Output: Underflow exception
+	 * Expected Output: InvalidParameterException
 	 * Assumptions: The program should check for underflow and throw an exception
 	 */
-	@Test (expected = Exception.class)
+	@Test (expected = InvalidParameterException.class)
 	public void getCumulativePercentages_ValidMIN_INTInput_Test() {
 				
 		Mockery mockingContext = new Mockery();
@@ -55,7 +56,7 @@ public class MININTInputTest {
 		});
 		
 		//This should throw an exception to indicate underflow
-		KeyedValues output = DataUtilities.getCumulativePercentages(input);
+		DataUtilities.getCumulativePercentages(input);
 		
 	}
 

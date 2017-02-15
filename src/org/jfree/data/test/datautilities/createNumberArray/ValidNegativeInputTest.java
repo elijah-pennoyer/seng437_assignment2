@@ -16,6 +16,7 @@ public class ValidNegativeInputTest {
 	 */
 	@Test
 	public void createNumberArray_ValidNegativeInput_Test() {
+		
 		double[] data = {-1.5, -1.5, -1.5};
 		Number[] output = DataUtilities.createNumberArray(data);
 		Number[] expected = {-1.5, -1.5, -1.5};

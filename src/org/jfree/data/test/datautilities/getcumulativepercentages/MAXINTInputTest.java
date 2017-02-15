@@ -1,5 +1,6 @@
 package org.jfree.data.test.datautilities.getcumulativepercentages;
 
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 
 import org.jfree.data.DataUtilities;
@@ -15,10 +16,10 @@ public class MAXINTInputTest {
 	 * Test Strategy Coverage: Some values contain MAX_INT
 	 * Description: Tests a valid data input with maximum integer values, 
 	 * 		with a keyset of (0,1) and values of (MAX_INT, MAX_INT)
-	 * Expected Output: Overflow exception
+	 * Expected Output: InvalidParameterException
 	 * Assumptions: The program should check for overflow and throw an exception
 	 */
-	@Test (expected = Exception.class)
+	@Test (expected = InvalidParameterException.class)
 	public void getCumulativePercentages_ValidMAX_INTInput_Test() {
 				
 		Mockery mockingContext = new Mockery();
@@ -55,7 +56,7 @@ public class MAXINTInputTest {
 		});
 		
 		//This should throw an exception to indicate overflow
-		KeyedValues output = DataUtilities.getCumulativePercentages(input);
+		DataUtilities.getCumulativePercentages(input);
 		
 	}
 
