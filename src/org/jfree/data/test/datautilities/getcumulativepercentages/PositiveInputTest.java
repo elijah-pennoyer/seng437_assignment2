@@ -60,7 +60,6 @@ public class PositiveInputTest {
 		KeyedValues output = DataUtilities.getCumulativePercentages(input);
 		
 		
-		//TODO - Is there a better way than multiple asserts?		
 		ArrayList<Integer> expectedKeys = new ArrayList<Integer>();
 		expectedKeys.add(0);
 		expectedKeys.add(1);
