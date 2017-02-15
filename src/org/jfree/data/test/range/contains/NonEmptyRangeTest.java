@@ -39,7 +39,7 @@ public class NonEmptyRangeTest {
 	 */
 
 	@Test
-	public void belowRange() {
+	public void contains_NonEmptyRange_BelowLowerBound_Test() {
 		boolean b = r.contains(1.0);
 		assertFalse("The given range should not contain 1.0", b);
 	}
@@ -66,7 +66,7 @@ public class NonEmptyRangeTest {
 	 */
 
 	@Test
-	public void withinRange() {
+	public void contains_NonEmptyRange_True_Test() {
 		boolean b = r.contains(2.0);
 		assertTrue("The given range should contain 2.0", b);
 	}
@@ -92,7 +92,7 @@ public class NonEmptyRangeTest {
 	 */
 
 	@Test
-	public void aboveRange() {
+	public void contains_NonEmptyRange_AboveUpperBound() {
 		boolean b = r.contains(3.0);
 		assertFalse("The given range should not contain 3.0", b);
 	}

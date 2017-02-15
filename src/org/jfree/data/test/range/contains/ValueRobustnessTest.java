@@ -54,7 +54,7 @@ public class ValueRobustnessTest {
 	 * Assumptions: The upper and lower fields in a Range object are contained in that Range
 	 */
 	@Test
-	public void robustnessTest() {
+	public void contains_ValueRobustness_Test() {
 		boolean b = r.contains(value);
 		assertEquals(expected, b);
 	}
