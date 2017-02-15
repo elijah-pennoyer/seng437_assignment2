@@ -29,18 +29,12 @@ public class EmptyInputTest {
 			{
 				//The "allowing" labels means that it doesn't matter how many times these options are called.
 				
-				/*TODO - Should we use allowing or expect the function to use call these functions only once? 
-				 * It looks like the function calls getItemCount but should we allow getKeys for possible future changes? - Elijah */
-				
 				
 				//If the method tries to get all keys, it will get an empty array list.
 				allowing (input).getKeys();
 				will(returnValue(new ArrayList<Integer>())); 
 				
-				//If the method tries to get the number of items, it will get 0. 
-				/*TODO: For some reason, this is called multiple times. The test fails if I expect it to be called only once.
-				 * I don't see why you'd need to call it multiple times, but I also don't see why the test should fail if it is
-				 *  - Elijah*/
+				//If the method tries to get the number of items, it will get 0.
 				allowing (input).getItemCount();
 				will(returnValue(0)); 
 				
