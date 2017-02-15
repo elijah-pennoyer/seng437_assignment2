@@ -29,9 +29,9 @@ public class NegativeCentralValueTest
 	{
 		return Arrays.asList(new Object[][]
 		{
-			{-10.5, -5.0, -7.75},
-			{-5.5, 0.0, -2.75},
-			{-10.5, 5.0, -2.75}
+			{-10.5,	-5.0,	-7.75},
+			{-5.5,	 0.0,	-2.75},
+			{-10.5,	 5.0,	-2.75}
 		});
 	}
 	
