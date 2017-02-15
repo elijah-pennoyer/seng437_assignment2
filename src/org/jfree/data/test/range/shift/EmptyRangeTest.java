@@ -19,7 +19,7 @@ public class EmptyRangeTest {
 	}
 	
 	/**
-	 * Test Plan Coverage: shift test plan 7
+	 * Test Plan Coverage: shift test plan 8
 	 * Test Strategy Coverage: empty range
 	 * Description: Tests the shift(Range, double) function on a Range from 5.0 to 5.0
 	 * 				with delta = 1.0

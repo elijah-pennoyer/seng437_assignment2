@@ -13,7 +13,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
-public class valueRobustnessTest {
+public class ValueRobustnessTest {
 
 	public Range r;
 	
@@ -28,7 +28,7 @@ public class valueRobustnessTest {
 		r = new Range(5, 10);
 	}
 	
-	public valueRobustnessTest(double value, boolean expected) {
+	public ValueRobustnessTest(double value, boolean expected) {
 		this.value = value;
 		this.expected = expected;
 	}

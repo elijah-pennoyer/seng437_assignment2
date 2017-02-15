@@ -1,4 +1,4 @@
-package org.jfree.data.test.datautilities.getcumulativepercentages;
+package org.jfree.data.test.datautilities.getCumulativePercentages;
 
 import static org.junit.Assert.*;
 
@@ -17,7 +17,8 @@ public class NegativeInputTest extends PositiveSummingMixedSignInputsTest {
 	 * Test Strategy Coverage: All values are negative
 	 * Description: Tests a valid data input and a positive data input, with a keyset of (0,1) and values of (-3,-7)
 	 * Expected Output: A KeyedValues object with keys (0, 1) and values (0.3, 1)
-	 * Assumptions: N/A
+	 * Assumptions: Because the KeyedValues object doesn't have an equals function, we will use multiple asserts to test that each
+	 * 		part of the object is correct.
 	 */
 	@Test
 	public void getCumulativePercentages_ValidNegativeInput_Test() {
@@ -58,7 +59,6 @@ public class NegativeInputTest extends PositiveSummingMixedSignInputsTest {
 		
 		KeyedValues output = DataUtilities.getCumulativePercentages(input);
 		
-		//TODO - Is there a better way than multiple asserts?
 		ArrayList<Integer> expectedKeys = new ArrayList<Integer>();
 		expectedKeys.add(0);
 		expectedKeys.add(1);

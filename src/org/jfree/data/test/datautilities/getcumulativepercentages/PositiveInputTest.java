@@ -1,4 +1,4 @@
-package org.jfree.data.test.datautilities.getcumulativepercentages;
+package org.jfree.data.test.datautilities.getCumulativePercentages;
 
 import static org.junit.Assert.*;
 
@@ -18,7 +18,8 @@ public class PositiveInputTest {
 	 * Test Strategy Coverage: Data is valid, All values are positive
 	 * Description: Tests a valid data input and a positive data input, with a keyset of (0,1) and values of (3,7)
 	 * Expected Output: A KeyedValues object with keys (0, 1) and values (0.3, 1)
-	 * Assumptions: N/A
+	 * Assumptions: Because the KeyedValues object doesn't have an equals function, we will use multiple asserts to test that each
+	 * 		part of the object is correct.
 	 */
 	@Test
 	public void getCumulativePercentages_ValidPositiveInput_Test() {
@@ -31,7 +32,6 @@ public class PositiveInputTest {
 				allowing (input).getItemCount();
 				will(returnValue(2)); 
 				
-				//TODO - Have no clue if you're allowed to do this, but it makes sense to me...
 				//If getKeys is called, it will return an ArrayList containing Integer objects of 0 and 1
 				allowing (input).getKeys();
 				ArrayList<Integer> toReturn = new ArrayList<Integer>();
@@ -60,7 +60,6 @@ public class PositiveInputTest {
 		KeyedValues output = DataUtilities.getCumulativePercentages(input);
 		
 		
-		//TODO - Is there a better way than multiple asserts?		
 		ArrayList<Integer> expectedKeys = new ArrayList<Integer>();
 		expectedKeys.add(0);
 		expectedKeys.add(1);

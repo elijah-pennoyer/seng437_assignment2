@@ -18,7 +18,7 @@ public class NullRangeTest {
 	}
 	
 	/**
-	 * Test Plan Coverage: shift test plan 8
+	 * Test Plan Coverage: shift test plan 9
 	 * Test Strategy Coverage: null range
 	 * Description: Tests the shift(Range, double) function on a null range
 	 * 				with delta = 1.0
