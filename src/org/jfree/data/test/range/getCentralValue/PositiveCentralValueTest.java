@@ -29,9 +29,9 @@ public class PositiveCentralValueTest
 	{
 		return Arrays.asList(new Object[][]
 		{
-			{5.0, 10.5, 7.75},
-			{0.0, 5.5, 2.75},
-			{-5.0, 10.5, 2.75}
+			{5.0,	10.5,	7.75},
+			{0.0,	5.5,	2.75},
+			{-5.0,	10.5,	2.75}
 		});
 	}
 	
