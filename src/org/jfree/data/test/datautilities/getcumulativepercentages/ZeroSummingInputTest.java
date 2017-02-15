@@ -1,5 +1,6 @@
 package org.jfree.data.test.datautilities.getcumulativepercentages;
 
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 
 import org.jfree.data.DataUtilities;
@@ -15,10 +16,10 @@ public class ZeroSummingInputTest {
 	 * Test Strategy Coverage: All values sum to 0
 	 * Description: Tests a valid data input with both positive and negative values where the sum is 0, 
 	 * 		with a keyset of (0,1) and values of (-5,5)
-	 * Expected Output: An exception is thrown
+	 * Expected Output: InvalidParameterException
 	 * Assumptions: A zero summing input isn't allowed, as it would lead to division by 0
 	 */
-	@Test (expected = Exception.class)
+	@Test (expected = InvalidParameterException.class)
 	public void getCumulativePercentages_ValidZeroSummingInput_Test() {
 		
 		Mockery mockingContext = new Mockery();
@@ -55,7 +56,7 @@ public class ZeroSummingInputTest {
 		
 		
 		//This should throw an exception
-		KeyedValues output = DataUtilities.getCumulativePercentages(input);
+		DataUtilities.getCumulativePercentages(input);
 		
 	}
 
