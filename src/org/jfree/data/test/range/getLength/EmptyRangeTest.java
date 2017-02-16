@@ -36,6 +36,6 @@ public class EmptyRangeTest
 	public void getLength_EmptyRange_Test()
 	{
 		double expected = 0.0, result = r.getLength();
-		assertEquals(expected, result, delta);
+		assertEquals("Tested getLength on a Range from 10.5 to 10.5", expected, result, delta);
 	}
 }

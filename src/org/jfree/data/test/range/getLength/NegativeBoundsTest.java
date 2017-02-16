@@ -36,6 +36,6 @@ public class NegativeBoundsTest
 	public void getLength_NegativeBounds_Test()
 	{
 		double expected = 5.5, result = r.getLength();
-		assertEquals(expected, result, delta);
+		assertEquals("Tested getLength on a Range from -10.5 to -5.0", expected, result, delta);
 	}
 }

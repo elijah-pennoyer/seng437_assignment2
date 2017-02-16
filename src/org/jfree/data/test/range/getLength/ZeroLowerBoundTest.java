@@ -36,6 +36,6 @@ public class ZeroLowerBoundTest
 	public void getLength_ZeroLowerBound_Test()
 	{
 		double expected = 5.5, result = r.getLength();
-		assertEquals(expected, result, delta);
+		assertEquals("Tested getLength on a Range from 0.0 to 5.5", expected, result, delta);
 	}
 }

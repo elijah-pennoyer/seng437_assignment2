@@ -39,7 +39,7 @@ public class EmptyRangeTest
 	public void getCentralValue_EmptyRange_Test()
 	{
 		double expected = 10.5, result = r.getCentralValue();
-		assertEquals(expected, result, delta);
+		assertEquals("Tested getCentralValue on a Range from 10.5 to 10.5", expected, result, delta);
 	}
 	
 }

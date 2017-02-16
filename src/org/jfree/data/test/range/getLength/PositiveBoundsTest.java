@@ -36,6 +36,6 @@ public class PositiveBoundsTest
 	public void getLength_PositiveBounds_Test()
 	{
 		double expected = 5.5, result = r.getLength();
-		assertEquals(expected, result, delta);
+		assertEquals("Tested getLength on a Range from 5.0 to 10.5", expected, result, delta);
 	}
 }
