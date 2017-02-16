@@ -37,14 +37,15 @@ public class ValidNegativeInputTest {
 	}
 
 	/**
-	 * Test Plan Coverage: contains test plan 1-b
+	 * Test Plan Coverage: calculateColumnTotal test plan 1-b
 	 * Test Strategy Coverage: Sum of Data column values is negative equivalence class and valid Column range equivalence class
 	 * Description: Tests the calculateColumnTotal function when presented with negative inputs
 	 * Expected Output: -15.0 for column 0, -9.0 for column 1 and -27.0 for column 2
 	 * Assumptions: N/A
 	 */
 	@Test
-	public void negativeTest() {
+	public void calculateColumnTotal_NegativeInput_Test() {
+		//mocked Values2D 3x3 array containing negative integers
 		Mockery mockingContext = new Mockery();
 		final Values2D input = mockingContext.mock(Values2D.class);
 		mockingContext.checking(new Expectations() {

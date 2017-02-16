@@ -1,4 +1,4 @@
-package org.jfree.data.test.datautilities.calculateColumnTotal;
+package org.jfree.data.test.datautilities.calculateRowTotal;
 
 import static org.junit.Assert.*;
 
@@ -15,67 +15,67 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
-public class ValidPositiveInputTest {
-	
-	//values for column being summed and expected sum result
-	public int col;
+public class ValidNegativeInputTest {
+
+	//values for row being summed and expected sum result
+	public int row;
 	public double expected;
 	
-	public ValidPositiveInputTest(int col, double expected) {
-		this.col = col;
+	public ValidNegativeInputTest(int row, double expected) {
+		this.row = row;
 		this.expected = expected;
 	}
 	
-	//parameters to test column indexes 0, 1 & 2
+	//parameters to test row indexes 0, 1 & 2
 	@Parameters
 	public static Collection<Object[]> data(){
 		return Arrays.asList(new Object[][] {
-			{0, 15},
-			{1, 9},
-			{2, 27}
+			{0, -15},
+			{1, -9},
+			{2, -27}
 		});
 	}
 
 	/**
-	 * Test Plan Coverage: calculateColumnTotal test plan 1-a
-	 * Test Strategy Coverage: Sum of Data column values is positive equivalence class and valid Column range equivalence class
-	 * Description: Tests the calculateColumnTotal function when presented with positive inputs
-	 * Expected Output: 15.0 for column 0, 9.0 for column 1 and 27.0 for column 2
+	 * Test Plan Coverage: calculateRowTotal test plan 1-b
+	 * Test Strategy Coverage: Sum of Data row values is negative equivalence class and valid Row range equivalence class
+	 * Description: Tests the calculateRowTotal function when presented with negative inputs
+	 * Expected Output: -15.0 for row 0, -9.0 for row 1 and -27.0 for row 2
 	 * Assumptions: N/A
 	 */
 	@Test
-	public void calculateColumnTotal_PositiveInput_Test() {
-		//mocked Values2D 3x3 array containing positive integers
+	public void negativeTest() {
+		//mocked Values2D 3x3 array containing negative integers
 		Mockery mockingContext = new Mockery();
 		final Values2D input = mockingContext.mock(Values2D.class);
 		mockingContext.checking(new Expectations() {
 			{
 			allowing (input).getValue(0,0);
-			will (returnValue(1));
+			will (returnValue(-1));
 			
 			allowing (input).getValue(0,1);
-			will (returnValue(3));
+			will (returnValue(-11));
 			
 			allowing (input).getValue(0,2);
-			will (returnValue(6));
+			will (returnValue(-3));
 			
 			allowing (input).getValue(1,0);
-			will (returnValue(11));
+			will (returnValue(-3));
 			
 			allowing (input).getValue(1,1);
-			will (returnValue(2));
+			will (returnValue(-2));
 			
 			allowing (input).getValue(1,2);
-			will (returnValue(2));
+			will (returnValue(-4));
 			
 			allowing (input).getValue(2,0);
-			will (returnValue(3));
+			will (returnValue(-6));
 			
 			allowing (input).getValue(2,1);
-			will (returnValue(4));
+			will (returnValue(-2));
 			
 			allowing (input).getValue(2,2);
-			will (returnValue(19));
+			will (returnValue(-19));
 			
 			allowing (input).getColumnCount();
 			will (returnValue(3));
@@ -85,7 +85,7 @@ public class ValidPositiveInputTest {
 			}
 		});
 		
-		double result = DataUtilities.calculateColumnTotal(input, col);
+		double result = DataUtilities.calculateRowTotal(input, row);
 		assertTrue("expected " + expected + " but got " + result, expected == result);
 	}
 

@@ -37,14 +37,15 @@ public class ValidMixedInputTest {
 	}
 
 	/**
-	 * Test Plan Coverage: contains test plan 1
+	 * Test Plan Coverage: calculateColumnTotal test plan 1-d
 	 * Test Strategy Coverage: Sum of Data column values is positive, negative and zero equivalence classes and valid Column range equivalence class
 	 * Description: Tests the calculateColumnTotal function when presented with mixed inputs
 	 * Expected Output: 0.0 for column 0, -4.0 for column 1 and 7.0 for column 2
 	 * Assumptions: N/A
 	 */
 	@Test
-	public void negativeTest() {
+	public void calculateColumnTotal_MixedInput_Test() {
+		//mocked Values2D 3x3 array containing mixed integers
 		Mockery mockingContext = new Mockery();
 		final Values2D input = mockingContext.mock(Values2D.class);
 		mockingContext.checking(new Expectations() {
