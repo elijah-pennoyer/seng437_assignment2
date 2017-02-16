@@ -60,6 +60,9 @@ public class PositiveCentralValueTest
 	public void getCentralValue_PositiveCentralValue_Test()
 	{
 		double result = r.getCentralValue();
-		assertEquals(expected, result, delta);
+		assertEquals("Tested getCentralValue on a positive-centered Range for " +
+				"three equivalence classes:\n1. non-empty Range (from 5.0 to 10.5)\n" +
+				"2. upper bound at zero (from 0.0 to 5.5)\n" +
+				"3. upper bound greater than zero (-5.0 to 10.5)", expected, result, delta);
 	}
 }

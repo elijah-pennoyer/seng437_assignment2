@@ -60,6 +60,9 @@ public class NegativeCentralValueTest
 	public void getCentralValue_NegativeCentralValue_Test()
 	{
 		double result = r.getCentralValue();
-		assertEquals(expected, result, delta);
+		assertEquals("Tested getCentralValue on a negative-centered Range for " +
+				"three equivalence classes:\n1. non-empty Range (from -10.5 to -5.0)\n" +
+				"2. upper bound at zero (from -5.5 to 0.0)\n" +
+				"3. upper bound greater than zero (-10.5 to 5.0)", expected, result, delta);
 	}
 }
