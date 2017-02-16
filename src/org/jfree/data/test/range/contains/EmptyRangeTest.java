@@ -42,7 +42,7 @@ public class EmptyRangeTest {
 	@Test
 	public void contains_EmptyRange_True_Test() {
 		boolean b = r.contains(1.5);
-		assertTrue("The given range should contain 1.5", b);
+		assertTrue("The empty range should contain 1.5", b);
 	}
 
 
@@ -69,7 +69,7 @@ public class EmptyRangeTest {
 	@Test
 	public void contains_EmptyRange_False_Test() {
 		boolean b = r.contains(1.6);
-		assertFalse("The given range should not contain 1.6",b);
+		assertFalse("The empty range should not contain 1.6", b);
 	}
 
 }
