@@ -30,7 +30,7 @@ public class NegativeBoundsAndNegativeDeltaTest {
 	public void shift_NegativeBoundsAndNegativeDelta_Test() {
 		Range result = Range.shift(r, -1.0);
 		Range expected = new Range(-11.0, -6.0);
-		assertEquals(expected, result);
+		assertEquals("Failed shift method with a negative delta (-1.0) on a negative Range (-10.0 to -5.0)", expected, result);
 	}
 
 }

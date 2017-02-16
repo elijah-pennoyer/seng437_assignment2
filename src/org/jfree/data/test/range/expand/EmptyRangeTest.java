@@ -30,6 +30,6 @@ public class EmptyRangeTest {
 	public void expand_EmptyRange_Test() {
 		Range result = Range.expand(r, 0.5, 0.5);
 		Range expected = new Range(5.0, 5.0);
-		assertEquals(expected, result);
+		assertEquals("Failed expand method on empty Range from 5.0 to 5.0", expected, result);
 	}
 }

@@ -30,6 +30,6 @@ public class PositiveBoundsTest {
 	public void expand_PositiveBounds_Test() {
 		Range result = Range.expand(r, 0.5, 0.5);
 		Range expected = new Range(2.5, 12.5);
-		assertEquals(expected, result);
+		assertEquals("Failed expand method on a positive Range from 5.0 to 10.0", expected, result);
 	}
 }

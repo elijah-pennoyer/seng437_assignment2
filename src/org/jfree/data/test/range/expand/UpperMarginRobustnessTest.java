@@ -72,6 +72,6 @@ public class UpperMarginRobustnessTest {
 	@Test
 	public void expand_UpperMarginRobustness_Test() {
 		Range result = Range.expand(r, 0.5, upperMargin);
-		assertEquals(expected, result);
+		assertEquals("Failed expand method with upperMargin parameter at " + upperMargin + " with a Range from 10.0 to 20.0",expected, result);
 	}
 }

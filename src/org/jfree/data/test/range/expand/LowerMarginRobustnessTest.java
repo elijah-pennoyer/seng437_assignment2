@@ -72,6 +72,6 @@ public class LowerMarginRobustnessTest {
 	@Test
 	public void expand_LowerMarginRobustness_Test() {
 		Range result = Range.expand(r, lowerMargin, 0.5);
-		assertEquals(expected, result);
+		assertEquals("Failed expand method with lowerMargin parameter at " + lowerMargin + " with a Range from 10.0 to 20.0", expected, result);
 	}
 }
