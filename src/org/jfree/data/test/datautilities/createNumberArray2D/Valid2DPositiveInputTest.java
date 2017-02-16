@@ -21,7 +21,7 @@ public class Valid2DPositiveInputTest extends Null2DInputTest {
 		Number[][] output = DataUtilities.createNumberArray2D(data);
 		Number[][] expected = { {1.5, 1.5, 1.5}, {1.5, 1.5, 1.5}, {1.5, 1.5, 1.5} };
 		
-		assertArrayEquals(expected, output);
+		assertArrayEquals("createNumberArray2D with an all positive input failed",expected, output);
 	}
 	
 }

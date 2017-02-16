@@ -21,7 +21,7 @@ public class ValidPositiveInputTest {
 		Number[] output = DataUtilities.createNumberArray(data);
 		Number[] expected = {1.5, 1.5, 1.5};
 		
-		assertArrayEquals(expected, output);
+		assertArrayEquals("createNumberArray with an all positive input failed",expected, output);
 	}
 	
 }

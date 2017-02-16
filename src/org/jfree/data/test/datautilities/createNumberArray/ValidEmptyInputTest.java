@@ -21,7 +21,7 @@ public class ValidEmptyInputTest {
 		Number[] output = DataUtilities.createNumberArray(data);
 		Number[] expected = new Number[0];
 		
-		assertArrayEquals(expected, output);
+		assertArrayEquals("createNumberArray with an empty input failed", expected, output);
 	}
 
 }

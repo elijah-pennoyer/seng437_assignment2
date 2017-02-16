@@ -22,7 +22,7 @@ public class ValidNegativeInputTest {
 		Number[] expected = {-1.5, -1.5, -1.5};
 
 		
-		assertArrayEquals(expected, output);
+		assertArrayEquals("createNumberArray with an all negative input failed", expected, output);
 	}
 
 }
