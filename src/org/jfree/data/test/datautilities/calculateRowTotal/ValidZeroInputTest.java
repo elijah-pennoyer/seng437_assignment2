@@ -45,7 +45,7 @@ public class ValidZeroInputTest {
 		});
 		
 		double result = DataUtilities.calculateRowTotal(input, 0);
-		assertTrue("expected 0.0 but got " + result, 0.0 == result);
+		assertTrue("Testing valid zero inputs. Expected 0.0 but got " + result, 0.0 == result);
 	}
 
 }
