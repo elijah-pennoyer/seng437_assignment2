@@ -44,7 +44,7 @@ public class ValidNegativeInputTest {
 	 * Assumptions: N/A
 	 */
 	@Test
-	public void negativeTest() {
+	public void calculateRowTotal_NegativeInput_Test() {
 		//mocked Values2D 3x3 array containing negative integers
 		Mockery mockingContext = new Mockery();
 		final Values2D input = mockingContext.mock(Values2D.class);

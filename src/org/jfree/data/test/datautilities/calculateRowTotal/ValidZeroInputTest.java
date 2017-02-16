@@ -18,7 +18,7 @@ public class ValidZeroInputTest {
 	 * Assumptions: N/A
 	 */
 	@Test
-	public void zeroTest() {
+	public void calculateRowTotal_ZeroInput_Test() {
 		//mocked Values2D array containing one row and 3 columns all filled with zero
 		Mockery mockingContext = new Mockery();
 		final Values2D input = mockingContext.mock(Values2D.class);
