@@ -36,7 +36,7 @@ public class PositiveCentralValueTest
 	}
 	
 	/**
-	 * 	Test Plan Coverage: getCentralValue test plan 4
+	 * 	Test Plan Coverage: getCentralValue test plan 3
 	 * 	Test Strategy Coverage: positive-centered Range
 	 * 	Description: 
 	 * 
