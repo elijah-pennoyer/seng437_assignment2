@@ -62,12 +62,12 @@ public class NegativeInputTest extends PositiveSummingMixedSignInputsTest {
 		ArrayList<Integer> expectedKeys = new ArrayList<Integer>();
 		expectedKeys.add(0);
 		expectedKeys.add(1);
-		assertEquals(expectedKeys, output.getKeys());
+		assertEquals("getCumulativePercentages with a negative input failed", expectedKeys, output.getKeys());
 		//NOTE: The final input for double-based assertEquals is "delta" - An offset of how close the values have to be.
 		//delta = 1e-15 is just a recommendation for delta off of the Internet - http://stackoverflow.com/questions/5686755/meaning-of-epsilon-argument-of-assertequals-for-double-values
 		double delta = 1e-15;
-		assertEquals(0.3, (double) output.getValue(0), delta);
-		assertEquals(1, (double) output.getValue(1), delta);
+		assertEquals("getCumulativePercentages with a negative input failed", 0.3, (double) output.getValue(0), delta);
+		assertEquals("getCumulativePercentages with a negative input failed", 1, (double) output.getValue(1), delta);
 		
 	}
 
