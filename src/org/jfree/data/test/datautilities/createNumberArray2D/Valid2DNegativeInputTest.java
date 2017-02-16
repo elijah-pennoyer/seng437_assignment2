@@ -21,7 +21,7 @@ public class Valid2DNegativeInputTest {
 		Number[][] output = DataUtilities.createNumberArray2D(data);
 		Number[][] expected = { {-1.5, -1.5, -1.5}, {-1.5, -1.5, -1.5}, {-1.5, -1.5, -1.5} };
 		
-		assertArrayEquals(expected, output);
+		assertArrayEquals("createNumberArray2D with an all negative input failed", expected, output);
 	}
 
 }

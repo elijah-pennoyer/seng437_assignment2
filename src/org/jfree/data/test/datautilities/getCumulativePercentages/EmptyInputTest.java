@@ -45,7 +45,7 @@ public class EmptyInputTest {
 		KeyedValues output = DataUtilities.getCumulativePercentages(input);
 		
 		//The assumed result is that the output will be an empty KeyedValues object
-		assertEquals(0, output.getItemCount());
+		assertEquals("getCumulativePercentages with an empty input failed", 0, output.getItemCount());
 
 	}
 

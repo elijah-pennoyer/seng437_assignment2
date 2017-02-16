@@ -30,7 +30,7 @@ public class ZeroDeltaTest {
 	public void shift_ZeroDelta_Test() {
 		Range result = Range.shift(r, 0.0);
 		Range expected = new Range(5.0, 10.0);
-		assertEquals(expected, result);
+		assertEquals("Failed shift method with delta = zero on a Range from 5.0 to 10.0", expected, result);
 	}
 
 }

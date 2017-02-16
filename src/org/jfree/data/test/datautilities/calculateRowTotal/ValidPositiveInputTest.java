@@ -45,7 +45,7 @@ public class ValidPositiveInputTest {
 	 * Assumptions: N/A
 	 */
 	@Test
-	public void calculateColumnTotal_PositiveInput_Test() {
+	public void calculateRowTotal_PositiveInput_Test() {
 		//mocked Values2D 3x3 array containing positive integers
 		Mockery mockingContext = new Mockery();
 		final Values2D input = mockingContext.mock(Values2D.class);

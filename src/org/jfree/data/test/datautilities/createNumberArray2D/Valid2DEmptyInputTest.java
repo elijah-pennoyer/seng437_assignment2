@@ -21,7 +21,7 @@ public class Valid2DEmptyInputTest {
 		Number[][] output = DataUtilities.createNumberArray2D(data);
 		Number[][] expected = new Number[0][0];
 		
-		assertArrayEquals(expected, output);
+		assertArrayEquals("createNumberArray2D with an empty input failed", expected, output);
 	}
 
 }

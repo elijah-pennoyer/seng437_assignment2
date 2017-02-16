@@ -30,6 +30,6 @@ public class ZeroCenteredRangeCrossOverZeroTest {
 	public void shift_ZeroCenteredRangeCrossOverZero_Test() {
 		Range result = Range.shift(r, 2.0);
 		Range expected = new Range(0.0, 3.0);
-		assertEquals(expected, result);
+		assertEquals("Failed shift method attempting to cross over zero with a zero-centered range",expected, result);
 	}
 }
