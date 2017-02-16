@@ -30,7 +30,7 @@ public class PositiveBoundsAndPositiveDeltaTest {
 	public void shift_PositiveBoundsAndPositiveDelta_Test() {
 		Range result = Range.shift(r, 1.0);
 		Range expected = new Range(6.0, 11.0);
-		assertEquals(expected, result);
+		assertEquals("Failed shift method with a positive delta (1.0) on a positive Range (5.0 to 10.0)", expected, result);
 	}
 
 }

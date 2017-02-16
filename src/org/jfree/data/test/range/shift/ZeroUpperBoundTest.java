@@ -30,6 +30,6 @@ public class ZeroUpperBoundTest {
 	public void shift_ZeroUpperBound_Test() {
 		Range result = Range.shift(r, 1.0);
 		Range expected = new Range(-4.0, 0.0);
-		assertEquals(expected, result);
+		assertEquals("Failed shift method on a Range with a zero upper bound (-5.0 to 0.0)", expected, result);
 	}
 }

@@ -30,6 +30,6 @@ public class ZeroUpperBoundTest {
 	public void expand_ZeroUpperBound_Test() {
 		Range result = Range.expand(r, 0.5, 0.5);
 		Range expected = new Range(-15.0, 5.0);
-		assertEquals(expected, result);
+		assertEquals("Failed expand method on a Range with a zero upper bound (-10.0 to 0.0)", expected, result);
 	}
 }

@@ -30,6 +30,6 @@ public class ZeroLowerBoundTest {
 	public void shift_ZeroLowerBound_Test() {
 		Range result = Range.shift(r, -1.0);
 		Range expected = new Range(0.0, 4.0);
-		assertEquals(expected, result);
+		assertEquals("Failed shift method on a Range with a zero lower bound (0.0 to 5.0)", expected, result);
 	}
 }

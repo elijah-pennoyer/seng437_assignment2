@@ -30,6 +30,6 @@ public class ZeroLowerBoundTest {
 	public void expand_ZeroLowerBound_Test() {
 		Range result = Range.expand(r, 0.5, 0.5);
 		Range expected = new Range(-5.0, 15.0);
-		assertEquals(expected, result);
+		assertEquals("Failed expand method on a Range with a zero lower bound (0.0 to 10.0)", expected, result);
 	}
 }

@@ -30,7 +30,7 @@ public class EmptyRangeTest {
 	public void shift_EmptyRange_Test() {
 		Range result = Range.shift(r, 1.0);
 		Range expected = new Range(6.0, 6.0);
-		assertEquals(expected, result);
+		assertEquals("Failed shift method on an empty Range from 5.0 to 5.0", expected, result);
 	}
 
 }

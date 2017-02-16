@@ -30,6 +30,6 @@ public class NegativeBoundsTest {
 	public void expand_NegativeBounds_Test() {
 		Range result = Range.expand(r, 0.5, 0.5);
 		Range expected = new Range(-12.5, -2.5);
-		assertEquals(expected, result);
+		assertEquals("Failed expand method on a negative Range from -10.0 to -5.0", expected, result);
 	}
 }

@@ -56,6 +56,6 @@ public class ValueRobustnessTest {
 	@Test
 	public void contains_ValueRobustness_Test() {
 		boolean b = r.contains(value);
-		assertEquals(expected, b);
+		assertEquals("Failed contains method with value of " + value + " on a Range from 5.0 to 10.0", expected, b);
 	}
 }
