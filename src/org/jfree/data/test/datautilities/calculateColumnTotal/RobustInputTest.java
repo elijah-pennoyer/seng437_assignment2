@@ -63,7 +63,7 @@ public class RobustInputTest {
 		});
 				
 		double result = DataUtilities.calculateColumnTotal(input, col);
-		assertTrue("expected 0 but got " + result, result == 0);
+		assertTrue("Testing invalid column indexes. Expected 0 but got " + result, result == 0);
 	}
 
 }

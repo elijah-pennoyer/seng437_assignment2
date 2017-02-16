@@ -86,7 +86,7 @@ public class ValidMixedInputTest {
 		});
 		
 		double result = DataUtilities.calculateColumnTotal(input, col);
-		assertTrue("expected " + expected + " but got " + result, expected == result);
+		assertTrue("Testing valid mixed input. Expected " + expected + " but got " + result, expected == result);
 	}
 
 }

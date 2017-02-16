@@ -33,7 +33,7 @@ public class EmptyInputTest {
 		});
 		
 		double result = DataUtilities.calculateRowTotal(input, 0);
-		assertTrue("expected 0 but got " + result, result == 0);
+		assertTrue("Testing empty input. Expected 0 but got " + result, result == 0);
 	}
 
 }

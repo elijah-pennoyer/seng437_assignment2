@@ -87,7 +87,7 @@ public class ValidPositiveInputTest {
 		});
 		
 		double result = DataUtilities.calculateRowTotal(input, row);
-		assertTrue("expected " + expected + " but got " + result, expected == result);
+		assertTrue("Testing valid positive input. Expected " + expected + " but got " + result, expected == result);
 	}
 
 }
