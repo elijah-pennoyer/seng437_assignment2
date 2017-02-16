@@ -1,4 +1,4 @@
-package org.jfree.data.test.datautilities.calculateColumnTotal;
+package org.jfree.data.test.datautilities.calculateRowTotal;
 
 import static org.junit.Assert.*;
 
@@ -17,16 +17,16 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parameterized.class)
 public class RobustInputTest {
 	
-	//values for column being summed and expected sum result
-	public int col;
+	//values for row being summed and expected sum result
+	public int row;
 	public double expected;
 	
-	public RobustInputTest(int col, double expected) {
-		this.col = col;
+	public RobustInputTest(int row, double expected) {
+		this.row = row;
 		this.expected = expected;
 	}
 	
-	//parameters to test column indexes -1 & 3
+	//parameters to test  row -1 & 3
 	@Parameters
 	public static Collection<Object[]> data(){
 		return Arrays.asList(new Object[][] {
@@ -36,15 +36,15 @@ public class RobustInputTest {
 	}
 
 	/**
-	 * Test Plan Coverage: calculateColumnTotal test plan 4-a & 4-b
-	 * Test Strategy Coverage: Column is below valid range and above valid range equivalence classes
+	 * Test Plan Coverage: calculateRowTotal test plan 4-a & 4-b
+	 * Test Strategy Coverage: Row is below valid range and above valid range equivalence classes
 	 * This test also covers the out of bounds portion of the robustness tests for this function (indexes -1 & N)
-	 * Description: Tests the calculateColumnTotal function when presented with out of bounds Column indexes
-	 * Expected Output: 0.0 (invalid column index)
+	 * Description: Tests the calculateRowTotal function when presented with out of bounds Row indexes
+	 * Expected Output: 0.0 (invalid row index)
 	 * Assumptions: N/A
 	 */
 	@Test
-	public void calculateColumnTotal_outOfRange_Test() {
+	public void calculateRowTotal_outOfRange_Test() {
 		
 		//mocked Values2D array containing a single column and row. All values in the array are 2
 		Mockery mockingContext = new Mockery();
@@ -62,7 +62,7 @@ public class RobustInputTest {
 			}
 		});
 				
-		double result = DataUtilities.calculateColumnTotal(input, col);
+		double result = DataUtilities.calculateRowTotal(input, row);
 		assertTrue("expected 0 but got " + result, result == 0);
 	}
 

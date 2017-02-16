@@ -39,6 +39,7 @@ public class ValidPositiveInputTest {
 	/**
 	 * Test Plan Coverage: calculateRowTotal test plan 1-a
 	 * Test Strategy Coverage: Sum of Data row values is positive equivalence class and valid Row range equivalence class
+	 * This test also covers the within bounds portion of the robustness tests for this function (indexes 0, 1, N/2, N-2 & N-1)
 	 * Description: Tests the calculateRowTotal function when presented with positive inputs
 	 * Expected Output: 15.0 for row 0, 9.0 for row 1 and 27.0 for row 2
 	 * Assumptions: N/A
