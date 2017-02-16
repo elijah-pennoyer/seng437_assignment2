@@ -1,0 +1,10 @@
+org.jfree.data.test.datautilities.calculateColumnTotal
+org.jfree.data.test.datautilities.calculateRowTotal
+org.jfree.data.test.datautilities.createNumberArray
+org.jfree.data.test.datautilities.createNumberArray2D
+org.jfree.data.test.datautilities.getCumulativePercentages
+org.jfree.data.test.range.contains
+org.jfree.data.test.range.expand
+org.jfree.data.test.range.getCentralValue
+org.jfree.data.test.range.getLength
+org.jfree.data.test.range.shift

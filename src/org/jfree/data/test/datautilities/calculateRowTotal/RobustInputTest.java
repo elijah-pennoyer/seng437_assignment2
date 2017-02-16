@@ -36,9 +36,9 @@ public class RobustInputTest {
 	}
 
 	/**
-	 * Test Plan Coverage: calculateRowTotal test plan 4-a & 4-b
+	 * Test Plan Coverage: calculateRowTotal test plan 4-a and 4-b
 	 * Test Strategy Coverage: Row is below valid range and above valid range equivalence classes
-	 * This test also covers the out of bounds portion of the robustness tests for this function (indexes -1 & N)
+	 * This test also covers the out of bounds portion of the robustness tests for this function (indexes -1 and N)
 	 * Description: Tests the calculateRowTotal function when presented with out of bounds Row indexes
 	 * Expected Output: 0.0 (invalid row index)
 	 * Assumptions: N/A

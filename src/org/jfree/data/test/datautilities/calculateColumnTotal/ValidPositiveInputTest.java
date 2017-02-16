@@ -39,7 +39,7 @@ public class ValidPositiveInputTest {
 	/**
 	 * Test Plan Coverage: calculateColumnTotal test plan 1-a
 	 * Test Strategy Coverage: Sum of Data column values is positive equivalence class and valid Column range equivalence class
-	 * This test also covers the within bounds portion of the robustness tests for this function (indexes 0, 1, N/2, N-2 & N-1)
+	 * This test also covers the within bounds portion of the robustness tests for this function (indexes 0, 1, N/2, N-2 and N-1)
 	 * Description: Tests the calculateColumnTotal function when presented with positive inputs
 	 * Expected Output: 15.0 for column 0, 9.0 for column 1 and 27.0 for column 2
 	 * Assumptions: N/A

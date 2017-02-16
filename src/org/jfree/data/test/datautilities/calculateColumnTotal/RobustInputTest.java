@@ -36,9 +36,9 @@ public class RobustInputTest {
 	}
 
 	/**
-	 * Test Plan Coverage: calculateColumnTotal test plan 4-a & 4-b
+	 * Test Plan Coverage: calculateColumnTotal test plan 4-a and 4-b
 	 * Test Strategy Coverage: Column is below valid range and above valid range equivalence classes
-	 * This test also covers the out of bounds portion of the robustness tests for this function (indexes -1 & N)
+	 * This test also covers the out of bounds portion of the robustness tests for this function (indexes -1 and N)
 	 * Description: Tests the calculateColumnTotal function when presented with out of bounds Column indexes
 	 * Expected Output: 0.0 (invalid column index)
 	 * Assumptions: N/A
