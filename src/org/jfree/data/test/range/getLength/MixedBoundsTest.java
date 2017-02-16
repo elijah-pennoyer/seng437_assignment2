@@ -36,6 +36,6 @@ public class MixedBoundsTest
 	public void getLength_MixedBounds_Test()
 	{
 		double expected = 10.5, result = r.getLength();
-		assertEquals("Tested getLength on a Rnage from -5.5 to 5.0", expected, result, delta);
+		assertEquals("Tested getLength on a Range from -5.5 to 5.0", expected, result, delta);
 	}
 }
